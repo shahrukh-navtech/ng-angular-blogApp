@@ -1,0 +1,43 @@
+<p>edit works!</p>
+
+
+
+<div layout="row" layout-align="center none">
+<form class="formwidth" (ngSubmit)="onSubmit()">
+	<section fxLayout="row wrap" fxLayoutAlign="center center">
+	  <mat-card class="example-card">
+	      <mat-card-title>Edit Article</mat-card-title>
+		      <mat-card-content>
+
+		      	<mat-form-field>
+		    			<input matInput placeholder="Title" [(ngModel)]="article.title" name="title">
+		 				</mat-form-field><br>
+
+
+
+					  <mat-form-field>
+					    <textarea matInput placeholder="Body" [(ngModel)]="article.body" name="body"></textarea>
+					  </mat-form-field><br>
+
+					  <mat-form-field>
+					    <input matInput placeholder="URL" [(ngModel)]="article.url" name="url">
+					  </mat-form-field><br>
+
+					  <mat-form-field>
+					    <mat-select placeholder="Select">
+					      <mat-option value="option">Option</mat-option>
+					    </mat-select>
+					  </mat-form-field>
+
+		      </mat-card-content>
+	      <mat-card-actions>
+	      	  <button mat-raised-button color="primary" >Update</button>
+	  				<button type="submit" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+	      </mat-card-actions>
+	    </mat-card>
+	</section>
+</form>
+
+</div>
+
+
