@@ -41,8 +41,14 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit() {
-  console.log("Test")
-    alert("Thanks for submitting! Data: " + JSON.stringify(this.article));
+    
+    // console.log("Test")
+    // alert("Thanks for submitting! Data: " + JSON.stringify(this.article));
+
+    this.apiService.post_article_save("articles/"+this.id, this.article).subscribe((data) => {
+      console.log(data);
+    });
+  
   }
 
 }

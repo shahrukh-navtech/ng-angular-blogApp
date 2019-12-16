@@ -16,4 +16,18 @@ export class ApiService {
       console.log(endpoint)
       return this.http.get(endpoint);
   }
+
+  public post_article_save(path, article){
+
+    var endpoint = this.API_URL + path;
+
+    var body = {
+      "title" : article.title,
+      "body" : article.body,
+      "url" : article.url
+    }
+    console.log(body)
+    // alert(body)
+    return this.http.put(endpoint, body);
+  }
 }
