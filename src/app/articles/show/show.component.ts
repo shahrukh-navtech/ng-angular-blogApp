@@ -23,7 +23,7 @@ export class ShowComponent implements OnInit {
       this.id = +params['id'];
   	});
 
-  	this.apiService.get("articles/"+this.id).subscribe((data) => {
+  	this.apiService.get_article("articles/"+this.id).subscribe((data) => {
     //console.log(data);
     this.article = [data]
     });

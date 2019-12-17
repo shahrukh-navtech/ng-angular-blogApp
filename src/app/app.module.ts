@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material';
 import { MatOptionModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatOptionModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

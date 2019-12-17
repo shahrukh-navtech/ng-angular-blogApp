@@ -4,12 +4,15 @@
 <form class="formwidth" (ngSubmit)="onSubmit()">
 	<section fxLayout="row wrap" fxLayoutAlign="center center">
 	  <mat-card class="example-card">
+		<flash-messages></flash-messages>
 	      <mat-card-title>Edit Article</mat-card-title>
 		      <mat-card-content>
 
 		      	<mat-form-field>
 		    			<input matInput placeholder="Title" [(ngModel)]="article.title" name="title">
 		 				</mat-form-field><br>
+
+
 
 					  <mat-form-field>
 					    <textarea matInput placeholder="Body" [(ngModel)]="article.body" name="body"></textarea>
@@ -28,7 +31,7 @@
 		      </mat-card-content>
 	      <mat-card-actions>
 	      	<button type="submit" mat-raised-button color="primary" >Update</button>
-	  		<button mat-raised-button color="warn" routerLink="/articles" >Cancel</button>
+	  		<button mat-raised-button color="warn" routerLink="/articles">Back</button>
 	      </mat-card-actions>
 	    </mat-card>
 	</section>
